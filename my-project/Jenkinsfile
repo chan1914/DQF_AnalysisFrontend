@@ -12,7 +12,7 @@ pipeline{
             steps{
                 dir("my-project"){
                     sh "mvn -version"
-                    sh "mvn clean install"
+                    sh "mvn clean prepare-frontend install"
                 }
             }
         }
