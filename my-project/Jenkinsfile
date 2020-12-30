@@ -18,8 +18,10 @@ pipeline{
         }
         stage('Build docker Image'){
             steps{
-                script{
-                    dockerImage = docker.build imagename
+                dir("my-project"){
+                    script{
+                        dockerImage = docker.build imagename
+                    }
                 }
             }
         }
