@@ -11,8 +11,8 @@ pipeline{
         stage('Build'){
             steps{
                 dir("my-project"){
-                    sh "mvn install -Pproduction"
                     sh "mvn -version"
+                    sh "mvn install -Pproduction"
                     sh "mvn clean install"
                 }
             }
